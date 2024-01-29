@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+				<!-- ========== Mosin ========== -->
+
+    <Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="CC_Mosin_Carbine"]/tools
+		</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>grip</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.54</cooldownTime>
+					<chanceFactor>1.5</chanceFactor>
+					<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>muzzle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.54</cooldownTime>
+					<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>CC_Mosin_Carbine</defName>
+		<statBases>
+			<Mass>4.00</Mass>
+			<RangedWeapon_Cooldown>1.17</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.00</SightsEfficiency>
+			<ShotSpread>0.03</ShotSpread>
+			<SwayFactor>1.63</SwayFactor>
+			<Bulk>12.32</Bulk>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<costList>
+			<WoodLog>15</WoodLog>
+			<Steel>55</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
+			<warmupTime>1.1</warmupTime>
+			<range>55</range>
+			<soundCast>Shot_BoltActionRifle</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+            <recoilAmount>2.14</recoilAmount>
+		</Properties>
+
+		<AmmoUser>
+			<magazineSize>5</magazineSize>
+			<reloadTime>4.3</reloadTime>
+			<ammoSet>AmmoSet_762x54mmR</ammoSet>
+		</AmmoUser>
+
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+
+        <weaponTags>
+            <li>CE_AI_SR</li>
+        </weaponTags>
+
+		<AllowWithRunAndGun>false</AllowWithRunAndGun>
+	</Operation>
+</Patch>
