@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ====================== Mosin Sniper's Bullet ===================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>CC_Bullet_Mosin_Rifle</defName>
+		<label>7.62x54mmR</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>16</damageAmountBase>
+			<armorPenetrationBase>0.14</armorPenetrationBase>
+			<stoppingPower>0.85</stoppingPower>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+
+	<!-- ====================== Mosin's Sniper Bullet ===================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>CC_APBullet_Mosin_Rifle</defName>
+		<label>7.62x54mmR</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<armorPenetrationBase>0.40</armorPenetrationBase>
+			<stoppingPower>1.60</stoppingPower>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+	
+	<!-- ====================== Mosin Carbine ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_Carbine</defName>
+		<label>Mosin-Nagant Carbine</label>
+		<description>The Mosin-Nagant Model 1944 Carbine is a bolt-action, internal magazine-fed military rifle. This carbine was introduced into service in late 1944 and remained in production until 1948. It was issued to Red Army infantry troops as a replacement for the standard rifle. These were in use not only by the Soviet Union, but also its various satellite nations.
+
+Compact and swift, an ideal choice for quick engagements without compromising power.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_Model_1944_Carbine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>3.2</Mass>
+			<AccuracyTouch>0.64</AccuracyTouch>
+			<AccuracyShort>0.78</AccuracyShort>
+			<AccuracyMedium>0.74</AccuracyMedium>
+			<AccuracyLong>0.66</AccuracyLong>
+			<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>35</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_Bullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>1.35</warmupTime>
+				<range>38</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- ====================== Mosin Carbine (Bayonet) ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_Carbine_Assault</defName>
+		<label>Mosin-Nagant Carbine (Bayonet)</label>
+		<description>The Mosin-Nagant Model 1944 Carbine is a bolt-action, internal magazine-fed military rifle. This carbine was introduced into service in late 1944 and remained in production until 1948. It was issued to Red Army infantry troops as a replacement for the standard rifle. These were in use not only by the Soviet Union, but also its various satellite nations.
+
+This carbine stands out with its bayonet for effective close-quarters combat.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_Model_1944_Carbine_Assault</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>13500</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.64</AccuracyTouch>
+			<AccuracyShort>0.78</AccuracyShort>
+			<AccuracyMedium>0.74</AccuracyMedium>
+			<AccuracyLong>0.66</AccuracyLong>
+			<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>38</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_Bullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>1.45</warmupTime>
+				<range>38</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>bayonet</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+ 				<power>14</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- ====================== Mosin Rifle ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_Rifle</defName>
+		<label>Mosin-Nagant</label>
+		<description>The Mosin-Nagant Model 1891/30 is a bolt-action, internal magazine-fed military rifle. The primary weapon of Russian and Red Army infantry from 1891 to 1930. A Soviet bolt-action rifle that was mass-produced.
+
+It might not be the best in every range, but it is truly a jack of all trades.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_Model_1891_30</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>4</Mass>
+			<AccuracyTouch>0.54</AccuracyTouch>
+			<AccuracyShort>0.74</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.76</AccuracyLong>
+			<RangedWeapon_Cooldown>1.85</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>45</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_Bullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>2.45</warmupTime>
+				<range>42</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- ====================== Mosin Rifle (Scoped) ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_Sniper_Rifle</defName>
+		<label>Mosin-Nagant (Scoped)</label>
+		<description>The Mosin-Nagant Model 1891/30 sniper rifle is a bolt-action, internal magazine-fed military rifle with PU 3.5x21 sight attached to it. The primary weapon of Russian and Red Army infantry from 1891 to 1930. A Soviet bolt-action rifle that was mass-produced.
+
+It's best to fight at a long range due to the slower aiming time.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_Model_1891_30_Scoped</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>18000</WorkToMake>
+			<Mass>4</Mass>
+			<AccuracyTouch>0.44</AccuracyTouch>
+			<AccuracyShort>0.62</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.89</AccuracyLong>
+			<RangedWeapon_Cooldown>2.35</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>55</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_APBullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>2.65</warmupTime>
+				<range>49</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>scope</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- ====================== Mosin Rifle ProMag ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_ProMag</defName>
+		<label>Mosin-Nagant ProMag</label>
+		<description>The Mosin-Nagant ProMag elevates precision with a fully adjustable ergonomic design. Featuring a ProMag stock, patented barrel pressure device, and a gooseneck-style grip, it ensures maximum accuracy. The grip includes a locking storage compartment, while the buttstock's click-adjustable length enhances versatility. This sniper Mosin combines innovation and functionality for an unparalleled shooting experience.
+
+The Mosin ProMag is a precision powerhouse, seamlessly blending ergonomics and innovative features to deliver unmatched accuracy and adaptability in the field.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_ProMag</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>28000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.48</AccuracyTouch>
+			<AccuracyShort>0.64</AccuracyShort>
+			<AccuracyMedium>0.88</AccuracyMedium>
+			<AccuracyLong>0.91</AccuracyLong>
+			<RangedWeapon_Cooldown>2.15</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_APBullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>1.95</warmupTime>
+				<range>51</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>scope</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- ====================== Mosin Obrez ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_Obrez</defName>
+		<label>Obrez Mosin-Nagant</label>
+		<description>The Obrez Mosin was a Mosin-Nagant Model 1891/30 rifle, the stock and the barrel was sawed-off. Mosin-Nagant was a primary weapon of Russian and Red Army infantry from 1891 to 1930. A Soviet bolt-action rifle that was mass-produced.
+
+It can still shoot, but perhaps it is better suited for hitting than shooting.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_Obrez</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>2</Mass>
+			<AccuracyTouch>0.74</AccuracyTouch>
+			<AccuracyShort>0.88</AccuracyShort>
+			<AccuracyMedium>0.54</AccuracyMedium>
+			<AccuracyLong>0.46</AccuracyLong>
+			<RangedWeapon_Cooldown>1.20</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_Bullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>1.15</warmupTime>
+				<range>32</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>0.8</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- ====================== Mosin Scav ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_Scav</defName>
+		<label>Scav Mosin-Nagant</label>
+		<description>The Scav Mosin was a poorly maintained Mosin-Nagant Model 1891/30 rifle, the stock and the barrel was sawed-off. Mosin-Nagant was a primary weapon of Russian and Red Army infantry from 1891 to 1930. A Soviet bolt-action rifle that was mass-produced.
+
+"No loot for you, my friend!"</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_Scav</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<Mass>2</Mass>
+			<AccuracyTouch>0.74</AccuracyTouch>
+			<AccuracyShort>0.88</AccuracyShort>
+			<AccuracyMedium>0.54</AccuracyMedium>
+			<AccuracyLong>0.46</AccuracyLong>
+			<RangedWeapon_Cooldown>1.20</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_Bullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>1.15</warmupTime>
+				<range>32</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>0.8</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- ====================== Mosin Obrez Mod ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_ObrezMOD</defName>
+		<label>Obrez Mosin-Nagant (Tactical)</label>
+		<description>The Obrez Mosin was a Mosin-Nagant Model 1891/30 rifle, the stock and the barrel were sawed-off, but it was also improved with a laser and a scope. Mosin-Nagant was a primary weapon of Russian and Red Army infantry from 1891 to 1930. A Soviet bolt-action rifle that was mass-produced.
+
+ The unconventional addition of a laser and a scope further enhances its adaptability somehow...</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_Obrez_Mod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>16500</WorkToMake>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.52</AccuracyTouch>
+			<AccuracyShort>0.66</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.54</AccuracyLong>
+			<RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>30</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_APBullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>1.15</warmupTime>
+				<range>49</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+			<li>
+				<label>scope</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- ====================== Mosin Cursed ===================== -->
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>CC_Mosin_Cursed</defName>
+		<label>The Chad Mosin-Nagant</label>
+		<description>The Chad Mosin was a Mosin-Nagant Model 1891/30 rifle, the stock and the barrel were sawed-off, but it was also improved with a bunch of lasers and plenty scopes. Mosin-Nagant was a primary weapon of Russian and Red Army infantry from 1891 to 1930. A Soviet bolt-action rifle that was mass-produced.
+
+The Chad Mosin-Nagant is a cursed creation born from a mishmash of misguided modifications. With a sawed-off barrel and stock, not one, but two red dots, a sniper scope, and a lot of lasers, it's a chaotic blend of innovation gone wrong. This is an abomination.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mosin-Nagant_Cursed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>CC_Interact_Mosin</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>20000</WorkToMake>
+			<Mass>4</Mass>
+			<AccuracyTouch>0.32</AccuracyTouch>
+			<AccuracyShort>0.46</AccuracyShort>
+			<AccuracyMedium>0.82</AccuracyMedium>
+			<AccuracyLong>0.94</AccuracyLong>
+			<RangedWeapon_Cooldown>2.75</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>38</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CC_APBullet_Mosin_Rifle</defaultProjectile>
+				<warmupTime>1.45</warmupTime>
+				<range>52</range>
+				<soundCast>CC_Shot_Mosin</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+			<li>
+				<label>scope</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+</Defs>
